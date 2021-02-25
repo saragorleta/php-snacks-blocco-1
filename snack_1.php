@@ -38,16 +38,13 @@ $lunghezzaMatches = count($matches);
 <body>
 
   <?php for($i = 0; $i < $lunghezzaMatches; $i++) {
-    $teamCasa = $matches[$i]['teamCasa '];
-    $teamOspite = $matches[$i]['teamOspite '];
-    $punteggio=$matches[$i]['punteggio '];
+    $teamCasa = $matches[$i]['teamCasa'];
+    $teamOspite = $matches[$i]['teamOspite'];
+    $punteggio=$matches[$i]['punteggio'];
   ?>
 
-    <h2><?php echo $teamCasa ?></h2>
-     <span> - </span>
-    <h2><?php echo $teamOspite ?></h2>
-     <span> | </span>
-    <h3><?php echo $punteggio ?></h3>
+    <h2><?php echo $teamCasa <span> : </span> .$teamOspite .$punteggio ?></h2>
+
 
   <?php  }   ?>
 
