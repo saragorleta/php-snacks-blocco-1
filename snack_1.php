@@ -43,7 +43,7 @@ $lunghezzaMatches = count($matches);
     $punteggio=$matches[$i]['punteggio'];
   ?>
 
-    <h2><?php echo $teamCasa <span> : </span> .$teamOspite .$punteggio ?></h2>
+    <h2><?php echo $teamCasa .'<span> - </span>' .$teamOspite .'<span> | </span>' .$punteggio ?></h2>
 
 
   <?php  }   ?>

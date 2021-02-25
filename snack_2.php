@@ -11,22 +11,23 @@
 $name = $_GET['nome'];
 $mail = $_GET['mail'];
 $age = $_GET['eta'];
+
 $validazioneAge= is_numeric($age);
 
-$messaggio = '';
+$messaggio = 'accesso consentito';
 
 if((empty($name)) || (empty($mail)) || (empty($age))) {
   $messaggio = "alcuni dati sono incompleti";
 }
-if ((strlen($name < 3))){
+if (strlen($name) < 3){
   $messaggio = "il nome deve essere più lungo di tre caratteri";
 }
 if ((strpos($mail, '@')) && (strpos($mail,'.'))) {
-  $messaggio = 'ok';
+
 } else {
   $messaggio = "la mail non è ben formata";
 }
-if ((!is_numeric($validazioneAge))){
+if (!$validazioneAge){
   $messaggio = "non stai inserendo un numero";
 }
 
@@ -43,7 +44,7 @@ if ((!is_numeric($validazioneAge))){
 </head>
 <body>
 
-  <?php echo $messaggio; ?>
+<?php echo $messaggio; ?>
 
 
 </body>
